@@ -1,15 +1,16 @@
 {
-  "name": "@muxjs/core",
-  "version": "0.1.0",
+  "name": "muxjs-core",
+  "version": "1.0.0",
   "description": "Mux.js core module",
   "main": "lib/index.js",
   "repository": "https://github.com/themx05/muxjs",
   "author": "Maximilien COMLAN",
   "license": "Apache 2.0",
-  "private": true,
+  "private": false,
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "webpack build"
+    "build": "webpack build",
+    "publish": "npm publish --access public"
   },
   "devDependencies": {
     "ts-loader": "^9.4.1",
