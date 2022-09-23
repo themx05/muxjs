@@ -1,6 +1,6 @@
 {
   "name": "muxjs-react",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Mux.js react version",
   "main": "lib/index.js",
   "repository": "https://github.com/themx05/muxjs",
@@ -10,6 +10,9 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "webpack build"
+  },
+  "exports": {
+    ".": "./lib/index.js"
   },
   "devDependencies": {
     "@types/react": "^18.0.21",
