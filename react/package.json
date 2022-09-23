@@ -1,5 +1,5 @@
 {
-  "name": "muxjs-react",
+  "name": "@muxjs/react",
   "version": "0.1.0",
   "description": "Mux.js react version",
   "main": "lib/index.js",

@@ -1,4 +1,4 @@
-import { Muxer } from  "muxjs-core";
+import { Muxer } from "@muxjs/core";
 
 const createCounter = (initialValue: number = 0) => {
   const muxer = new Muxer();

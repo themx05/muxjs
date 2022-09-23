@@ -1,5 +1,5 @@
 {
-  "name": "muxjs-core",
+  "name": "@muxjs/core",
   "version": "0.1.0",
   "description": "Mux.js core module",
   "main": "lib/index.js",
