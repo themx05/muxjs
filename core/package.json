@@ -1,0 +1,17 @@
+{
+  "name": "muxjs-core",
+  "version": "0.1.0",
+  "description": "Mux.js core module",
+  "main": "lib/index.js",
+  "repository": "https://github.com/themx05/muxjs",
+  "author": "Maximilien COMLAN",
+  "license": "Apache 2.0",
+  "private": true,
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}

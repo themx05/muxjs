@@ -1,0 +1,20 @@
+{
+  "name": "muxjs-react",
+  "version": "0.1.0",
+  "description": "Mux.js react version",
+  "main": "lib/index.js",
+  "repository": "https://github.com/themx05/muxjs",
+  "author": "Maximilien COMLAN",
+  "license": "MIT",
+  "private": true,
+  "types": "lib/index.d.ts",
+  "devDependencies": {
+    "typescript": "^4.8.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

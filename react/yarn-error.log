@@ -1,0 +1,50 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn link
+
+PATH: 
+  /home/maximilien/.local/bin:/home/maximilien/bin:/home/maximilien/.local/bin:/home/maximilien/bin:/home/maximilien/.cargo/bin:/home/maximilien/.local/bin:/home/maximilien/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/maximilien/.local/share/coursier/bin:/home/maximilien/.local/share/coursier/bin:/home/maximilien/Android/Sdk/emulator:/home/maximilien/Android/Sdk/platform-tools:/home/maximilien/.local/share/coursier/bin:/home/maximilien/Android/Sdk/emulator:/home/maximilien/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.19.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/maximilien/Projects/events/muxjs/react/package.json: Unexpected token } in JSON at position 389
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "muxjs-react",
+    "version": "0.1.0",
+    "description": "Mux.js react version",
+    "main": "lib/index.js",
+    "repository": "https://github.com/themx05/muxjs",
+    "author": "Maximilien COMLAN",
+    "license": "MIT",
+    "private": true,
+    "types": "lib/index.d.ts",
+    "devDependencies": {
+      "typescript": "^4.8.3",
+      "@types/react": "^18.0.21",
+      "@types/react-dom": "^18.0.6",
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

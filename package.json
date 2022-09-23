@@ -1,0 +1,15 @@
+{
+  "name": "muxjs",
+  "version": "0.1.0",
+  "description": "MuxJS is a project which aims to empower javascript event or data-driven applications",
+  "main": "index.js",
+  "repository": "https://github.com/themx05/muxjs",
+  "author": "Maximilien COMLAN",
+  "license": "Apache 2.0",
+  "private": true,
+  "workspaces":[
+    "core",
+    "react",
+    "samples"
+  ]
+}
