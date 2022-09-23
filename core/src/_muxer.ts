@@ -1,6 +1,6 @@
-import Signal from "./_signal";
+import { Signal } from "./_signal";
 
-export default class Muxer {
+export class Muxer {
     private _channel: MessageChannel;
 
     constructor() {

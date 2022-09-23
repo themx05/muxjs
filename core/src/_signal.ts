@@ -5,7 +5,7 @@ interface EventBase<T> {
     _payload: T;
 }
 
-export default class Signal<T = any> {
+export class Signal<T = any> {
     event: MessageEvent<EventBase<T>>;
     expression?: RegExp | string;
 
