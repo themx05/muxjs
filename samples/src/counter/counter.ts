@@ -1,4 +1,4 @@
-import { Muxer } from "@muxjs/core";
+import { Muxer } from "muxjs-core";
 
 const createCounter = (initialValue: number = 0) => {
   const muxer = new Muxer();
@@ -12,7 +12,14 @@ const createCounter = (initialValue: number = 0) => {
     set value(next: number) {
       let lastValue = this._innerValue;
       this._innerValue = next;
-      muxer.dispatch("counter/updated", { value: this.value, previous: lastValue});
+      muxer.dispatch("counter/updated", { value: this.value, previous: lastValue });
+    },
+
+    onChange(cb: (value: number, previous: number) => any) {
+      let cancel = muxer.subscribeOnly("counter/updated", signal => {
+        cb(signal.data?.value, signal?.data.previous);
+      });
+      return cancel;
     },
 
     inc(by: number) {
@@ -23,12 +30,6 @@ const createCounter = (initialValue: number = 0) => {
       this.value -= by;
     },
 
-    onChange(cb: (value: number, previous: number) => any) {
-      let cancel = muxer.subscribeOnly("counter/updated", signal => {
-        cb(signal.data?.value, signal?.data.previous);
-      });
-      return cancel;
-    }
   }
 }
 
