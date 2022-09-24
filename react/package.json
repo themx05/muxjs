@@ -1,9 +1,8 @@
 {
   "name": "muxjs-react",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Mux.js react version",
   "main": "lib/index.js",
-  "module": "dist/bundle.js",
   "repository": "https://github.com/themx05/muxjs",
   "author": "Maximilien COMLAN",
   "license": "MIT",
@@ -13,17 +12,10 @@
     "build": "webpack build"
   },
   "exports": {
-    ".": [
-      {
-        "import": "./lib/index.js",
-        "require": "./dist/bundle.js"
-      },
-      "./lib/index.js"
-    ]
+    ".": "./lib/index.js"
   },
   "files": [
-    "*.d.ts",
-    "dist",
+    "lib/*.d.ts",
     "lib"
   ],
   "devDependencies": {
@@ -34,7 +26,7 @@
     "webpack": "^5.74.0"
   },
   "dependencies": {
-    "muxjs-core": "1.0.7",
+    "muxjs-core": "^1.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
