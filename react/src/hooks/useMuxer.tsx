@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MuxerContext } from "../_context";
+import { MuxerContext } from "../context";
 
 export const useMuxer = () => {
     const ctx = useContext(MuxerContext);

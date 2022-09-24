@@ -1,11 +1,11 @@
-import { Signal } from "./_signal";
-import { Muxer } from "./_muxer";
-import { Object } from "./_mux-object";
+import { Signal } from "./signal";
+import { Muxer } from "./muxer";
+import { MuxObject } from "./object";
 
-export { Signal } from "./_signal";
-export { Muxer } from "./_muxer";
-export { Object } from "./_mux-object";
+const Mux = { Signal, Muxer, MuxObject };
 
-const Mux = { Signal, Muxer, Object };
+export * from "./muxer";
+export * from "./object";
+export * from "./signal";
 
 export default Mux;

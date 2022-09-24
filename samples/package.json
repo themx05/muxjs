@@ -13,7 +13,7 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "muxjs-core": "^1.0.8",
+    "muxjs-core": "^1.0.15",
     "tokenizr": "^1.6.7"
   }
 }

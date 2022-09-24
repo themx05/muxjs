@@ -1,20 +1,18 @@
 {
   "name": "muxjs-core",
-  "version": "1.0.10",
+  "version": "1.0.15",
   "description": "Mux.js core module",
   "repository": "https://github.com/themx05/muxjs",
   "author": "Maximilien COMLAN",
-  "license": "Apache",
+  "license": "MIT",
   "private": false,
   "types": "lib/index.d.ts",
+  "main": "./lib/index.js",
   "scripts": {
-    "build": "tsc && webpack build"
+    "build": "tsc"
   },
   "exports": {
-    ".":{
-      "import": "./lib/index.js",
-      "require": "./lib/bundle.js"
-    }
+    ".": "./lib/index.js"
   },
   "devDependencies": {
     "ts-loader": "^9.4.1",

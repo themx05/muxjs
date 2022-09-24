@@ -1,6 +1,6 @@
 {
   "name": "muxjs-react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Mux.js react version",
   "main": "lib/index.js",
   "repository": "https://github.com/themx05/muxjs",
@@ -26,7 +26,7 @@
     "webpack": "^5.74.0"
   },
   "dependencies": {
-    "muxjs-core": "^1.0.8",
+    "muxjs-core": "^1.0.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
