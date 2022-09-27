@@ -3,7 +3,7 @@ import { MuxerContext } from "../context";
 
 export const useMuxer = () => {
     const ctx = useContext(MuxerContext);
-    if (!ctx) {
+    if (!ctx || (ctx as any).__unset) {
         throw new Error("useMuxer should only be called within a MuxProvider");
     }
     return ctx;

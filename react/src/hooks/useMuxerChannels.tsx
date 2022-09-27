@@ -8,7 +8,7 @@ export function useMuxerChannels<T = any>(
   signalHandler?: (signal: Signal<T>) => any
 ) {
   const muxer = useMuxer();
-  const signal = useSignal();
+  const signal = useSignal<T>();
 
   useEffect(() => {
     let subscription = muxer.subscribeMultiple<T>(channels, (s) => {
@@ -22,7 +22,7 @@ export function useMuxerChannels<T = any>(
 
   return {
     muxer,
-    previous: signal.previous,
-    latest: signal.current,
+    previous: signal?.previous || undefined,
+    latest: signal?.current || undefined,
   };
 }

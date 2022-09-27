@@ -30,7 +30,7 @@ export function useMuxerChannel<T = any>(
   return {
     muxer,
     dispatch,
-    previous: signal.previous,
-    latest: signal.current,
+    previous: signal?.previous || undefined,
+    latest: signal?.current || undefined,
   };
 }

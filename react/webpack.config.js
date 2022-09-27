@@ -14,11 +14,18 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', 'jsx', '.js'],
     },
 
     output: {
         filename: 'index.js',
+        libraryTarget: 'umd',
+        library: "Mux",
         path: path.resolve(__dirname, 'lib'),
+    },
+
+    externals: {
+        react: "react",
+        "react-dom": "react-dom"
     }
 }

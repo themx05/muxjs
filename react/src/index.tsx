@@ -7,7 +7,6 @@ import { useMuxerChannels } from "./hooks/useMuxerChannels";
 import { useMuxObject } from "./hooks/useMuxObject";
 import { useSignal } from "./hooks/useSignal";
 
-
 export function MuxProvider({
   muxer,
   children,
