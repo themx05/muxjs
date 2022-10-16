@@ -1,13 +1,14 @@
+import produce, { Draft } from "immer";
 import { Muxer } from "./muxer";
 import { Signal } from "./signal";
 
 export class MuxObject<T = { [key: string]: any }> {
-    #mux: Muxer;
+    mux: Muxer;
     #value!: T;
 
     constructor(initialValue: T) {
         let mux = new Muxer();
-        this.#mux = mux;
+        this.mux = mux;
         this.value = initialValue;
     }
 
@@ -18,13 +19,23 @@ export class MuxObject<T = { [key: string]: any }> {
     set value(next: T) {
         let prev = this.#value;
         this.#value = next;
-        this.#mux.dispatch('setValue', {
+        this.mux.dispatch('setValue', {
             value: this.#value,
             previous: prev,
         });
     }
 
+    /**
+     * 
+     * @param {(draft: Draft<T>) => any} callback
+     * Uses immer to produce the next immutable state based on the callback passed, which is supposed to alter the given draft.
+     * Prefer calling this function instead of directly calling `this.value = nextValue`
+     */
+    update(callback: (draft: Draft<T>) => any){
+        this.value = produce(this.value, callback);
+    }
+
     onChange(callback: (signal: Signal<{ value: T, previous: T }>) => any) {
-        return this.#mux.subscribeOnly('setValue', callback);
+        return this.mux.subscribeOnly('setValue', callback);
     }
 }
