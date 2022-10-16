@@ -1,6 +1,6 @@
 {
   "name": "muxjs-react",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Mux.js react version",
   "main": "lib/index.js",
   "repository": "https://github.com/themx05/muxjs",

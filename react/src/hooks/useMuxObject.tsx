@@ -1,11 +1,11 @@
 import { MuxObject, Signal } from "muxjs-core";
 import { useEffect, useState } from "react";
 
-export function useMuxObject<T = any>(
-  source: MuxObject<T>,
-  onUpdate?: (signal: Signal<{ value: T; previous: T }>) => any
+export function useMuxObject<T extends MuxObject<T['value']>>(
+  source: T,
+  onUpdate?: (signal: Signal<{ value: T['value']; previous: T['value'] }>) => any
 ) {
-  const [previous, setPreviousValue] = useState<T | undefined>(undefined);
+  const [previous, setPreviousValue] = useState<T['value']>();
   const [value, setValue] = useState(source.value);
 
   useEffect(() => {
