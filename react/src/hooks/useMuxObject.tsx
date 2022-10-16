@@ -12,6 +12,9 @@ export function useMuxObject<T = any>(
     let subscription = source.onChange((signal) => {
       setValue(signal.data.value);
       setPreviousValue(signal.data.previous);
+      if (onUpdate) {
+        onUpdate(signal);
+      }
     });
     return subscription;
   }, [source, onUpdate]);
