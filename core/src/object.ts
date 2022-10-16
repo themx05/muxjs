@@ -3,12 +3,12 @@ import { Muxer } from "./muxer";
 import { Signal } from "./signal";
 
 export class MuxObject<T = { [key: string]: any }> {
-    mux: Muxer;
+    #mux: Muxer;
     #value!: T;
 
     constructor(initialValue: T) {
         let mux = new Muxer();
-        this.mux = mux;
+        this.#mux = mux;
         this.value = initialValue;
     }
 
@@ -19,10 +19,26 @@ export class MuxObject<T = { [key: string]: any }> {
     set value(next: T) {
         let prev = this.#value;
         this.#value = next;
-        this.mux.dispatch('setValue', {
+        this.#mux.dispatch('setValue', {
             value: this.#value,
             previous: prev,
         });
+    }
+
+    get dispatch() {
+        return this.#mux.dispatch
+    }
+
+    get subscribeOnly() {
+        return this.#mux.subscribeOnly
+    }
+
+    get subscribeMultiple() {
+        return this.#mux.subscribeMultiple
+    }
+
+    get subscripeMatch() {
+        return this.#mux.subscribeMatch
     }
 
     /**
@@ -36,6 +52,6 @@ export class MuxObject<T = { [key: string]: any }> {
     }
 
     onChange(callback: (signal: Signal<{ value: T, previous: T }>) => any) {
-        return this.mux.subscribeOnly('setValue', callback);
+        return this.#mux.subscribeOnly('setValue', callback);
     }
 }
