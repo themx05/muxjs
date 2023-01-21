@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "CommonJS",
     "lib": ["ESNext", "DOM", "ES2022.String"],
     "moduleResolution": "Node",
     "strict": true,
